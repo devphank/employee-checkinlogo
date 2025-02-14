@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Check-In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Seal_of_San_Jose%2C_California.svg/1200px-Seal_of_San_Jose%2C_California.svg.png" 
+         alt="City of San Jose Logo" class="logo">
+    <h1>Employee Check-In System</h1>
+</header>
+
+<div class="container">
+    <p>Welcome to the employee check-in portal for the City of San Jose. Please fill out the form below.</p>
+
+    <section>
+        <h2>Personal Information</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="John Doe" required>
+
+        <label for="position">Position/Title:</label>
+        <input type="text" id="position" placeholder="Your Job Title" required>
+    </section>
+
+    <section>
+        <h2>Contact Information</h2>
+        <label for="contact">Phone or Email:</label>
+        <input type="text" id="contact" placeholder="Your Contact Information" required>
+    </section>
+
+    <section>
+        <h2>Check-In Details</h2>
+        <label for="checkin">Check-In Time:</label>
+        <input type="datetime-local" id="checkin" required>
+
+        <label for="travel">Travel Method:</label>
+        <select id="travel">
+            <option value="POV">POV (Personal Vehicle)</option>
+            <option value="AOV">AOV (Assigned Vehicle)</option>
+            <option value="Bus">Bus</option>
+            <option value="Air">Air</option>
+            <option value="Other">Other</option>
+        </select>
+    </section>
+
+    <section>
+        <h2>Check-Out</h2>
+        <label for="checkout">Check-Out Time:</label>
+        <input type="datetime-local" id="checkout" required>
+
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" placeholder="Your Name" required>
+    </section>
+
+    <button onclick="submitForm()">Submit</button>
+    <button onclick="printForm()">Print</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
